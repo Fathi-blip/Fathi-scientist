@@ -33,7 +33,7 @@
 
 ### 📌 Projets à la Une
 
-#### 🏥 [MediBook](github.com/Fathi-blip/medibook_project)
+#### 🏥 [MediBook](https://github.com/Fathi-blip/medibook_project)
 > Application web de gestion médicale et de prise de rendez-vous, conteneurisée et prête au déploiement.
 - **Stack :** Django, Docker, Docker Compose, PostgreSQL
 - **Highlights :** Architecture multi-conteneurs, gestion d'environnement isolée pour le déploiement local et cloud.
