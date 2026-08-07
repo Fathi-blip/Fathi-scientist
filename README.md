@@ -51,7 +51,14 @@
 - **Highlights :** Algorithmes d'ordonnancement, sécurisation des accès et gestion granulaire des utilisateurs.
 
 ---
+#### 🛗 [Ascenseur Intelligent](https://github.com/Fathi-blip/elevator-intelligent)
+> Système multi-cabines avec vision par ordinateur et dispatch automatique.
+>
+> - **Stack :** Python, OpenCV, Tkinter, Threading, NumPy
+> - **Highlights :** 2 ascenseurs communicants, détection de visages/personnes,
+>   dispatch vers la cabine la plus proche, canal de messages inter-cabines.
 
+---
 ### 💼 Expériences Pratiques
 
 - **Stagiaire Data Science** — *FCZ (Rabat)*
