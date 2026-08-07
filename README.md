@@ -45,10 +45,6 @@
 - 📊 **Description :** Simulation de 10 000 scénarios pour la prédiction de matchs de football.
 - 🔗 **Rapport interactif :** [Voir la simulation en ligne]([https://fathi-blip.github.io/Fathi-scientist/monte-carlo.html])
 - 📌 **Source des données :** Données issues de [Kaggle](https://www.kaggle.com).
-#### 📅 [SystemGestionCabinet](https://github.com/votre-compte/SystemGestionCabinet)
-> Solution web intégrée avec authentification basée sur les rôles (RBAC) et algorithmes de planification.
-- **Stack :** React, Node.js / Django, REST API
-- **Highlights :** Algorithmes d'ordonnancement, sécurisation des accès et gestion granulaire des utilisateurs.
 
 ---
 #### 🛗 [Ascenseur Intelligent](https://github.com/Fathi-blip/elevator-intelligent)
