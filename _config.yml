@@ -1,5 +1,6 @@
 title: "Fathi Abdeladim"
+logo: img/logo.png
 description: "Portfolio Data Scientist"
-show_downloads: false
-theme: jekyll-theme-cayman
+show_downloads: true
+theme: jekyll-theme-minimal
 lang: fr
