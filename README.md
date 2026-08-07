@@ -1,15 +1,15 @@
 # Hi there, I’m Abdeladim Fathi 👋
 
 🎓 **Élève Ingénieur en Modélisation et Informatique scientifique (MIS)** à l’**École Mohammadia d’Ingénieurs (EMI)**  
-💡 Passionné par le **Développement Full-Stack**, l’**Ingénierie Cloud & Data**, ainsi que la **Finance de marché & Modélisation financière**.
+💡 Passionné par la **Data**, ainsi que la **Finance de marché & Modélisation financière**.
 
 ---
 
 ### 🚀 À propos de moi
 
 - 🎓 **Formation :** CPGE (Lycée Moulay Idriss) ➔ École Mohammadia d’Ingénieurs (EMI)
-- 💻 **Spécialité :** Développement Web, Architecture Cloud, Data & Analytics
-- 📊 **Domaines d’intérêt :** Modélisation quantitative (Simulations Monte Carlo, Analyse de risque), Systèmes distribués, Cloud Engineering
+- 💻 **Spécialité :** Développement Web, Data & Analytics
+- 📊 **Domaines d’intérêt :** Data science, Modélisation quantitative (Simulations Monte Carlo, Analyse de risque), mathématiques appliqué
 - 📍 **Localisation :** Rabat, Maroc
 
 ---
