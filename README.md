@@ -38,12 +38,12 @@
 - **Stack :** Django, Docker, Docker Compose, PostgreSQL
 - **Highlights :** Architecture multi-conteneurs, gestion d'environnement isolée pour le déploiement local et cloud.
 
-#### 📊 [Monte Carlo Sports Analytics](https://github.com/votre-compte/monte-carlo-analytics)
+#### 📊 [Monte Carlo Sports Analytics](https://github.com/Fathi-blip/Fathi-scientist)
 > Modèle prédictif basé sur 10 000 simulations statistiques pour l'analyse et la prédiction de résultats sportifs.
 - **Stack :** Python, NumPy, Matplotlib
 - **Highlights :** Modélisation stochastique, calcul de distributions de probabilités et d'indicateurs de risque.
 - 📊 **Description :** Simulation de 10 000 scénarios pour la prédiction de matchs de football.
-- 🔗 **Rapport interactif :** [Voir la simulation en ligne](https://fathi-blip.github.io/Fathi-projects/monte-carlo.html)
+- 🔗 **Rapport interactif :** [Voir la simulation en ligne]([https://fathi-blip.github.io/Fathi-scientist/monte-carlo.html])
 - 📌 **Source des données :** Données issues de [Kaggle](https://www.kaggle.com).
 #### 📅 [SystemGestionCabinet](https://github.com/votre-compte/SystemGestionCabinet)
 > Solution web intégrée avec authentification basée sur les rôles (RBAC) et algorithmes de planification.
