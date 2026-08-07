@@ -72,5 +72,5 @@
 
 ### 📬 Me contacter
 
-- **LinkedIn :** [www.linkedin.com/in/abdeladim-fathi-aab80b332]([https://www.linkedin.com/in/abdeladim-fathi-aab80b332])
-- **Email :** [abdeladimfathi41@gmail.com](abdeladimfathi41@gmail.com)
+* LinkedIn : [www.linkedin.com/in/abdeladim-fathi-aab80b332](https://www.linkedin.com/in/abdeladim-fathi-aab80b332)
+* Email : [abdeladimfathi41@gmail.com](mailto:abdeladimfathi41@gmail.com)
