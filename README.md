@@ -43,7 +43,7 @@
 > - **Stack :** Python, NumPy, Matplotlib
 > - **Highlights :** Modélisation stochastique, calcul de distributions de probabilités et d’indicateurs de risque.
 > - 📊 **Description :** Simulation de 10 000 scénarios pour la prédiction de matchs de football.
-> - 🔗 **Rapport interactif :** [Voir la simulation en ligne](https://fathi-blip.github.io/Fathi-scientist/monte_carlo_football.html)
+> - 🔗 🔗 [Rapport interactif : Voir la simulation en ligne](https://fathi-blip.github.io/Fathi-scientist/monte-carlo.html)
 > - 📌 **Source des données :** Données issues de [Kaggle](https://www.kaggle.com).
 
 ---
