@@ -1,6 +1,5 @@
-title: "Fathi Abdeladim"
-logo: img/logo.png
-description: "Portfolio Data Scientist"
+theme: jekyll-theme-cayman
+title: Fathi Abdeladim
+description: "Élève Ingénieur en Modélisation et Informatique Scientifique | Data, Finance & Cloud"
 show_downloads: false
-theme: jekyll-theme-minimal
-lang: fr
+google_analytics:
