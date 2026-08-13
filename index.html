@@ -10,17 +10,22 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0A0E17;
-    --surface:#111827;
-    --surface-2:#161F32;
-    --border:rgba(255,255,255,0.09);
-    --text:#ECEEF3;
-    --text-muted:#8891A6;
-    --text-faint:#5A6478;
-    --gold:#E3A64E;
-    --gold-dim:#8A6531;
-    --teal:#3FC1B0;
-    --teal-dim:#1F5F57;
+    --bg:#0A0E1C;
+    --surface:#12172B;
+    --surface-2:#181F3A;
+    --border:rgba(255,255,255,0.10);
+    --text:#F4F5FA;
+    --text-muted:#9AA3C0;
+    --text-faint:#666F94;
+    --gold:#FFB648;
+    --gold-dim:#B4802E;
+    --teal:#2FE0C4;
+    --teal-dim:#1B7A69;
+    --violet:#A78BFA;
+    --violet-dim:#5B4A9E;
+    --coral:#FF6B7A;
+    --coral-dim:#9E3F4B;
+    --pink:#FF7ED4;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
@@ -69,9 +74,22 @@
 
   /* HERO */
   .hero{
+    position:relative;
     padding:88px 0 64px;
     border-bottom:1px solid var(--border);
+    overflow:hidden;
   }
+  .hero::before{
+    content:'';
+    position:absolute; inset:-20% -10% auto -10%; height:600px;
+    background:
+      radial-gradient(480px 320px at 12% 20%, rgba(255,182,72,0.22), transparent 70%),
+      radial-gradient(520px 360px at 85% 10%, rgba(47,224,196,0.20), transparent 70%),
+      radial-gradient(420px 300px at 55% 55%, rgba(167,139,250,0.16), transparent 70%);
+    pointer-events:none;
+    z-index:0;
+  }
+  .hero .wrap{position:relative; z-index:1;}
   .hero-grid{
     display:grid;
     grid-template-columns:1.1fr 0.9fr;
@@ -83,12 +101,15 @@
   .eyebrow{
     font-size:12px; letter-spacing:0.15em; text-transform:uppercase;
     color:var(--teal); margin-bottom:18px; display:flex; align-items:center; gap:10px;
+    font-weight:500;
   }
   .eyebrow::before{
-    content:''; width:26px; height:1px; background:var(--teal);
+    content:''; width:8px; height:8px; border-radius:50%;
+    background:var(--teal);
+    box-shadow:0 0 12px 2px rgba(47,224,196,0.7);
   }
   .hero h1{
-    font-size:clamp(30px, 4.4vw, 44px);
+    font-size:clamp(30px, 4.4vw, 46px);
     font-weight:700;
     line-height:1.18;
     margin-bottom:20px;
@@ -96,7 +117,10 @@
   }
   .hero h1 em{
     font-style:normal;
-    color:var(--gold);
+    background:linear-gradient(100deg, var(--gold) 0%, var(--coral) 55%, var(--pink) 100%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
   }
   .hero p.lead{
     font-size:16px;
@@ -116,14 +140,16 @@
     display:inline-block;
   }
   .btn-primary{
-    background:var(--gold);
+    background:linear-gradient(100deg, var(--gold), var(--coral));
     color:#1a1206;
-    border-color:var(--gold);
+    border-color:transparent;
     font-weight:700;
+    box-shadow:0 0 0 rgba(255,107,122,0);
+    transition:box-shadow .25s, transform .18s;
   }
-  .btn-primary:hover{background:#f0b563;}
+  .btn-primary:hover{box-shadow:0 4px 24px rgba(255,140,90,0.35); transform:translateY(-1px);}
   .btn-secondary{color:var(--text); }
-  .btn-secondary:hover{border-color:var(--text-faint); background:var(--surface);}
+  .btn-secondary:hover{border-color:var(--teal); background:var(--surface); color:var(--teal);}
 
   /* MONTE CARLO CANVAS */
   .mc-box{
@@ -131,6 +157,7 @@
     border:1px solid var(--border);
     border-radius:6px;
     padding:18px;
+    box-shadow:0 0 40px -12px rgba(47,224,196,0.25);
   }
   .mc-head{
     display:flex; justify-content:space-between; align-items:baseline;
@@ -198,7 +225,13 @@
     border:1px solid var(--border);
     border-radius:3px;
     color:var(--text-muted);
+    transition:all .18s;
   }
+  .pill:hover{transform:translateY(-2px);}
+  .pill-violet{border-color:var(--violet-dim); color:var(--violet); background:rgba(167,139,250,0.08);}
+  .pill-teal{border-color:var(--teal-dim); color:var(--teal); background:rgba(47,224,196,0.08);}
+  .pill-gold{border-color:var(--gold-dim); color:var(--gold); background:rgba(255,182,72,0.08);}
+  .pill-coral{border-color:var(--coral-dim); color:var(--coral); background:rgba(255,107,122,0.08);}
 
   /* PROJECTS */
   .project{
@@ -207,9 +240,9 @@
     padding:26px;
     margin-bottom:20px;
     background:var(--surface);
-    transition:border-color .2s;
+    transition:border-color .2s, box-shadow .2s, transform .2s;
   }
-  .project:hover{border-color:var(--gold-dim);}
+  .project:hover{transform:translateY(-2px);}
   .project-top{
     display:flex; justify-content:space-between; align-items:flex-start;
     gap:16px; margin-bottom:10px; flex-wrap:wrap;
@@ -217,10 +250,15 @@
   .project h3{font-size:17px; font-weight:700;}
   .project .tag{
     font-family:'JetBrains Mono', monospace; font-size:10px;
-    color:var(--teal); border:1px solid var(--teal-dim);
     padding:3px 9px; border-radius:20px; text-transform:uppercase; letter-spacing:0.05em;
     white-space:nowrap;
   }
+  .project.p-teal:hover{border-color:var(--teal-dim); box-shadow:0 8px 30px -10px rgba(47,224,196,0.35);}
+  .project.p-coral:hover{border-color:var(--coral-dim); box-shadow:0 8px 30px -10px rgba(255,107,122,0.35);}
+  .project.p-violet:hover{border-color:var(--violet-dim); box-shadow:0 8px 30px -10px rgba(167,139,250,0.35);}
+  .tag-teal{color:var(--teal); border:1px solid var(--teal-dim); background:rgba(47,224,196,0.08);}
+  .tag-coral{color:var(--coral); border:1px solid var(--coral-dim); background:rgba(255,107,122,0.08);}
+  .tag-violet{color:var(--violet); border:1px solid var(--violet-dim); background:rgba(167,139,250,0.08);}
   .project p{color:var(--text-muted); font-size:14px; margin-bottom:14px;}
   .project ul{list-style:none; margin-bottom:14px;}
   .project li{
@@ -235,8 +273,9 @@
     font-family:'JetBrains Mono', monospace; font-size:12px;
     color:var(--gold); text-decoration:none; border-bottom:1px solid var(--gold-dim);
     padding-bottom:1px;
+    transition:color .18s, border-color .18s;
   }
-  .project-links a:hover{border-color:var(--gold);}
+  .project-links a:hover{border-color:var(--gold); color:#ffc876;}
 
   /* EXPERIENCE */
   .xp{display:flex; gap:20px; margin-bottom:26px;}
@@ -250,12 +289,23 @@
 
   /* CONTACT */
   .contact-box{
+    position:relative;
     background:var(--surface);
     border:1px solid var(--border);
     border-radius:6px;
     padding:40px;
     text-align:center;
+    overflow:hidden;
   }
+  .contact-box::before{
+    content:'';
+    position:absolute; inset:-40% -10% auto -10%; height:220px;
+    background:
+      radial-gradient(300px 200px at 20% 0%, rgba(255,182,72,0.18), transparent 70%),
+      radial-gradient(300px 200px at 80% 0%, rgba(47,224,196,0.18), transparent 70%);
+    pointer-events:none;
+  }
+  .contact-box > *{position:relative;}
   .contact-box h2{font-size:26px; margin-bottom:12px;}
   .contact-box p{color:var(--text-muted); margin-bottom:26px;}
   .contact-links{display:flex; justify-content:center; gap:16px; flex-wrap:wrap;}
@@ -335,22 +385,22 @@
       <div class="stack-group">
         <h3>Langages & frameworks</h3>
         <div class="pill-row">
-          <span class="pill">Python</span>
-          <span class="pill">Django</span>
-          <span class="pill">Next.js</span>
-          <span class="pill">React</span>
-          <span class="pill">Jakarta EE</span>
+          <span class="pill pill-violet">Python</span>
+          <span class="pill pill-violet">Django</span>
+          <span class="pill pill-violet">Next.js</span>
+          <span class="pill pill-violet">React</span>
+          <span class="pill pill-violet">Jakarta EE</span>
         </div>
       </div>
       <div class="stack-group">
         <h3>Data, finance & infra</h3>
         <div class="pill-row">
-          <span class="pill">NumPy</span>
-          <span class="pill">Pandas</span>
-          <span class="pill">Matplotlib</span>
-          <span class="pill">Docker</span>
-          <span class="pill">PostgreSQL</span>
-          <span class="pill">Git</span>
+          <span class="pill pill-teal">NumPy</span>
+          <span class="pill pill-teal">Pandas</span>
+          <span class="pill pill-teal">Matplotlib</span>
+          <span class="pill pill-gold">Docker</span>
+          <span class="pill pill-gold">PostgreSQL</span>
+          <span class="pill pill-gold">Git</span>
         </div>
       </div>
     </div>
@@ -362,10 +412,10 @@
     <div class="section-num">03</div>
     <h2 class="section-title">Projets à la une</h2>
 
-    <div class="project">
+    <div class="project p-teal">
       <div class="project-top">
         <h3>Monte Carlo Sports Analytics</h3>
-        <span class="tag">Simulation stochastique</span>
+        <span class="tag tag-teal">Simulation stochastique</span>
       </div>
       <p>Modèle prédictif basé sur 10 000 simulations statistiques pour l'analyse et la prédiction de résultats de matchs de football.</p>
       <ul>
@@ -379,10 +429,10 @@
       </div>
     </div>
 
-    <div class="project">
+    <div class="project p-coral">
       <div class="project-top">
         <h3>MediBook</h3>
-        <span class="tag">Web / conteneurisé</span>
+        <span class="tag tag-coral">Web / conteneurisé</span>
       </div>
       <p>Application web de gestion médicale et de prise de rendez-vous, conteneurisée et prête au déploiement.</p>
       <ul>
@@ -394,10 +444,10 @@
       </div>
     </div>
 
-    <div class="project">
+    <div class="project p-violet">
       <div class="project-top">
         <h3>Ascenseur Intelligent</h3>
-        <span class="tag">Vision par ordinateur</span>
+        <span class="tag tag-violet">Vision par ordinateur</span>
       </div>
       <p>Système multi-cabines avec vision par ordinateur et dispatch automatique entre deux ascenseurs communicants.</p>
       <ul>
